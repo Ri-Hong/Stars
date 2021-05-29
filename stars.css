@@ -1,0 +1,111 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  min-height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+#bottom {
+  position: absolute;
+  bottom: -375px;
+  left: -375px;
+  /* border: 3px red solid; */
+  min-width: 750px;
+  min-height: 750px;
+  animation: cornerAnimate 10s linear infinite;
+}
+
+#top {
+  position: absolute;
+  top: -375px;
+  right: -375px;
+  min-width: 750px;
+  min-height: 750px;
+  /* border: 3px red solid; */
+
+  animation: cornerAnimate 10s linear infinite;
+}
+
+
+@keyframes cornerAnimate {
+  0% {
+    filter: hue-rotate(0deg);
+    transform: rotate(0deg);
+
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes centerAnimate {
+  0% {
+    filter: hue-rotate(0deg);
+    transform: translate(0, 0);
+  }
+  100% {
+    filter: hue-rotate(180deg);
+    top: var(--toY);
+    left: var(--toX);
+    /* transform: translate(var(--toX), var(--toY)); */
+  }
+}
+
+
+.glowing span {
+  position: absolute;
+  top: var(--initialY);
+  left: var(--initialX);
+  animation: centerAnimate var(--time) linear alternate infinite;
+}
+
+.glowing span:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  width: var(--size);
+  height: var(--size);
+  background: #f00;
+  border-radius: 25%;
+}
+
+.glowing span:nth-child(3n + 1):before {
+  background: rgba(134, 255, 0, 1);
+  box-shadow: 0 0 20px rgba(134, 255, 0, 1),
+              0 0 40px rgba(134, 255, 0, 1),
+              0 0 60px rgba(134, 255, 0, 1),
+              0 0 80px rgba(134, 255, 0, 1),
+              0 0 0 8px rgba(134, 255, 0, .1);
+}
+
+.glowing span:nth-child(3n + 2):before {
+  background: rgba(255, 214, 0, 1);
+  box-shadow: 0 0 20px rgba(255, 214, 0, 1),
+              0 0 40px rgba(255, 214, 0, 1),
+              0 0 60px rgba(255, 214, 0, 1),
+              0 0 80px rgba(255, 214, 0, 1),
+              0 0 0 8px rgba(255, 214, 0, .1);
+}
+
+.glowing span:nth-child(3n + 3):before {
+  background: rgba(0, 226, 255, 1);
+  box-shadow: 0 0 20px rgba(0, 226, 255, 1),
+              0 0 40px rgba(0, 226, 255, 1),
+              0 0 60px rgba(0, 226, 255, 1),
+              0 0 80px rgba(0, 226, 255, 1),
+              0 0 0 8px rgba(0, 226, 255, .1);
+}
+
+.glowing span:nth-child(3n + 4):before {
+  background: rgb(182, 71, 226);
+  box-shadow: 0 0 20px rgba(182, 71, 226, 1),
+              0 0 40px rgba(182, 71, 226, 1),
+              0 0 60px rgba(182, 71, 226, 1),
+              0 0 80px rgba(182, 71, 226, 1),
+              0 0 0 8px rgba(0, 226, 255, .1);
+}

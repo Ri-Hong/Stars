@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Stars</title>
+    <link rel='stylesheet' type='text/css' href='stars.css'>
+    <script>
+      function getRandomizedData(id) {
+        var r = document.getElementById(id);
+        r.style.setProperty('--initialX', Math.floor(Math.random() * 100).toString()+'%');
+        r.style.setProperty('--initialY', Math.floor(Math.random() * 100).toString()+'%');
+        r.style.setProperty('--toX', Math.floor(Math.random() * 100).toString()+'%');
+        r.style.setProperty('--toY', Math.floor(Math.random() * 100).toString()+'%');
+        r.style.setProperty('--size', Math.floor(Math.random() * 30 + 5).toString()+'px');
+        r.style.setProperty('--time', Math.floor(Math.random() * 100 + 5).toString()+'s');
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class='glowing'>
+      <span id='star1'></span>
+      <script>getRandomizedData('star1');</script>
+      <span id='star2'></span>
+      <script>getRandomizedData('star2');</script>
+      <span id='star3'></span>
+      <script>getRandomizedData('star3');</script>
+      <span id='star4'></span>
+      <script>getRandomizedData('star4');</script>
+      <span id='star5'></span>
+      <script>getRandomizedData('star5');</script>
+      <span id='star6'></span>
+      <script>getRandomizedData('star6');</script>
+      <span id='star7'></span>
+      <script>getRandomizedData('star7');</script>
+      <span id='star8'></span>
+      <script>getRandomizedData('star8');</script>
+      <span id='star9'></span>
+      <script>getRandomizedData('star9');</script>
+      <span id='star10'></span>
+      <script>getRandomizedData('star10');</script>
+      <span id='star11'></span>
+      <script>getRandomizedData('star11');</script>
+      <span id='star12'></span>
+      <script>getRandomizedData('star12');</script>
+      <span id='star13'></span>
+      <script>getRandomizedData('star13');</script>
+      <span id='star14'></span>
+      <script>getRandomizedData('star14');</script>
+      <span id='star15'></span>
+      <script>getRandomizedData('star15');</script>
+    </div>
+
+    <div class='glowing' id='bottom'>
+      <span style='--size:10px;'></span>
+    </div>
+    <div class='glowing' id='top'>
+      <span style='--size:10px;'></span>
+    </div>
+  </body>
+</html>
