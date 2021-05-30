@@ -11,7 +11,9 @@
         r.style.setProperty('--toX', Math.floor(Math.random() * 100).toString()+'%');
         r.style.setProperty('--toY', Math.floor(Math.random() * 100).toString()+'%');
         r.style.setProperty('--size', Math.floor(Math.random() * 30 + 5).toString()+'px');
-        r.style.setProperty('--time', Math.floor(Math.random() * 100 + 5).toString()+'s');
+        r.style.setProperty('--time', Math.floor(Math.random() * 100 + 20).toString()+'s');
+        r.style.setProperty('--borderRadius', Math.floor(Math.random() * 25 + 30).toString()+'%');
+
       }
     </script>
   </head>
@@ -51,10 +53,10 @@
     </div>
 
     <div class='glowing' id='bottom'>
-      <span style='--size:10px;'></span>
+      <span style='--size:10px; --borderRadius: 25%;'></span>
     </div>
     <div class='glowing' id='top'>
-      <span style='--size:10px;'></span>
+      <span style='--size:10px; --borderRadius: 25%;'></span>
     </div>
   </body>
 </html>

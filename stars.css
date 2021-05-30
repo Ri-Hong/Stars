@@ -12,10 +12,9 @@ body {
   position: absolute;
   bottom: -375px;
   left: -375px;
-  /* border: 3px red solid; */
   min-width: 750px;
   min-height: 750px;
-  animation: cornerAnimate 10s linear infinite;
+  animation: cornerAnimate 30s linear infinite;
 }
 
 #top {
@@ -24,9 +23,8 @@ body {
   right: -375px;
   min-width: 750px;
   min-height: 750px;
-  /* border: 3px red solid; */
 
-  animation: cornerAnimate 10s linear infinite;
+  animation: cornerAnimate 30s linear infinite;
 }
 
 
@@ -51,7 +49,6 @@ body {
     filter: hue-rotate(180deg);
     top: var(--toY);
     left: var(--toX);
-    /* transform: translate(var(--toX), var(--toY)); */
   }
 }
 
@@ -66,12 +63,9 @@ body {
 .glowing span:before {
   content: '';
   position: absolute;
-  top: 50%;
-  left: -8px;
   width: var(--size);
   height: var(--size);
-  background: #f00;
-  border-radius: 25%;
+  border-radius: var(--borderRadius);
 }
 
 .glowing span:nth-child(3n + 1):before {
